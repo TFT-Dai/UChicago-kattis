@@ -1,3 +1,5 @@
+#https://uchicago.kattis.com/problems/uchicagoplacement.fill
+
 def fill(a, i, v, x):
     if i < 0 or i >= len(a):
         return
