@@ -11,8 +11,8 @@ def fill(a, i, v, x):
     fill(a, i-1, v, x)
     fill(a, i+1, v, x)
 
-N, I, X = map(int, input().split(' '))
-arr = list(map(int, input().split(' ')))
+N, I, X = map(int, input().split())
+arr = list(map(int, input().split()))
 V = arr[I]
 fill(arr, I, V, X)
 for j in range(N):
