@@ -1,6 +1,6 @@
 #https://uchicago.kattis.com/problems/uchicagoplacement.kmers
 
-L, N, k, Q = input().split(" ")
+L, N, k, Q = input().split()
 s = ''
 for i in range(int(L)):
     s += input()
