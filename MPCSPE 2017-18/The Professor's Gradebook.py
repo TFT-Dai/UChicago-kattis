@@ -18,11 +18,11 @@ class StudentGrade:
         self.name = name
         self.score = score
 
-N, M = map(int, input().split(' '))
+N, M = map(int, input().split())
 max_score = 0
 student = []
 for i in range(N):
-    ch, *scores = input().split(' ')
+    ch, *scores = input().split()
     scores = list(map(int, scores))
     score = sum(scores) - min(scores[:-1])
     max_score = max(max_score, score)
