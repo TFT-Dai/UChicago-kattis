@@ -3,7 +3,7 @@
 V = int(input())
 E = int(input())
 visited = [False] * V
-G = [[] for v in range(V)]
+G = [[] for v in range(V)] #G[i] saved the vertices connected to vertex i
 
 def dfs(graph, root):
     visited[root] = True
@@ -14,11 +14,11 @@ def dfs(graph, root):
 
 for i in range(E):
     v1, v2 = map(int, input().split())
-    G[v1].append(v2)
+    G[v1].append(v2) 
     G[v2].append(v1)
 ans = 0
 for i in range(V):
     if not visited[i]:
         dfs(G, i)
-        ans += 1
+        ans += 1 #every dfs stops after finishing traversing a connected component
 print(ans)
