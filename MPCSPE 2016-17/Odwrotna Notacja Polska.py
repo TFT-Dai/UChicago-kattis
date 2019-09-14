@@ -21,10 +21,10 @@ def postfix_calculator(token):
                 return "TYPE ERROR"
             if token[ptr] in bool_op and v1.isdigit() and v2.isdigit():
                 return "TYPE ERROR"
-            ep = [v1.title(), token[ptr], v2.title()]
-            tmp = str(eval(" ".join(ep))).lower()
-            stack.append(tmp)
-            ptr += 1
+            ep = [v1.title(), token[ptr], v2.title()] #v.title() convert true/false to True/False so that can be operated by eval()
+            tmp = str(eval(" ".join(ep))).lower()  #eval(st) implements st explicitly, e.g. eval("1+2")=3, eval("True and False")=False
+            stack.append(tmp)  #spaces are joined in ep to make boolean operation accessible in eval().
+            ptr += 1           #Before pushing tmp back to the stack, convert it(possibly True/False) to lower.
 
     if len(stack) != 1:
         return "SYNTAX ERROR"
