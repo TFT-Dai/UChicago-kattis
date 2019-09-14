@@ -4,7 +4,7 @@ V = int(input())
 E = int(input())
 visited = [False] * V
 G = [[] for v in range(V)] #G[i] saved the vertices connected to vertex i
-
+                           #Using [[]] * V will cause bugs, it keeps the inner list as the same one
 def dfs(graph, root):
     visited[root] = True
     for vertex in graph[root]:
