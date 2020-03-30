@@ -1,7 +1,4 @@
 #https://uchicago.kattis.com/problems/uchicago.mpcs.sinking
-#This code wasn't accepted successfully. It exceeds the time limit at case 13/38.
-#C/C++ may handle this problem swiftly in 10ms circa.
-#This code just tries to show the logic of the problem.
 
 N, M, S, R = map(int, input().split())
 H, P = 0, 0
